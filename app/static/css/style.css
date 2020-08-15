@@ -1,0 +1,274 @@
+
+
+body {
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: 960px;
+    margin: auto;
+    text-align: center;
+}
+
+p {
+    font-weight: lighter;
+    font-size: small;
+    font-style: italic;
+}
+
+h1, h2, h3 {
+    color: rgb(27, 99, 58);
+}
+
+a, a:visited {
+    text-decoration: black;
+    color: black;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    width: 240px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 10px;
+    font-size: medium;
+    text-transform: uppercase;
+    font-weight: bold;
+    background-color: rgb(13, 128, 70);
+    color: white;
+}
+
+.header {
+    height: 50px;
+    width: 960px;
+    background-color: rgb(255, 254, 254);
+    position: absolute;
+    top: 0px;
+    border-bottom: 2px solid black;
+    color: rgb(13, 128, 70);
+}
+
+.header ul li {
+    float: left;
+    text-align: center;
+    font-weight: bold;
+}
+
+.header ul li:not(.image) {
+    padding: 15px 10px 10px;
+    float: right;
+
+}
+
+.header ul li img {
+    height: 50px;
+    padding: 0px 20px 20px 10px;
+}
+
+.header a, .header a:visited {
+    color: rgb(13, 128, 70);
+}
+
+#upload {
+    margin-top: 75px;
+    text-align: center;
+}
+
+.dropzone {
+    height: auto;
+    margin-top:30px;
+    background-color: rgb(187, 235, 212);
+    border-radius: 5px;
+}
+
+#quarters {
+    margin-top: 50px;
+    text-align: center;
+}
+
+#quarters p, #quarters h3 {
+    text-align: left;
+}
+
+#quarters h3 {
+    font-size: 24px;;
+}
+
+.columns-list p {
+    font-weight: 100;
+    margin: 20px 0px 0px 30px;
+}
+
+.first, .second {
+    float: left;
+    width: 218px;
+    height: 300px;
+    margin: 10px;
+    text-align: center;
+    border-radius: 10px;
+    border: 1px solid gray;
+    overflow: scroll;
+    background-color: rgb(224, 224, 224);
+}
+
+.first ul, .second ul {
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(187, 235, 212);
+}
+
+.first li, .second li {
+    padding-top: 21px;
+    padding-bottom: 21px;
+    font-size: medium;
+    border-bottom: 1px solid black;
+    user-select: none;
+}
+
+.first li:hover, .second li:hover {
+    font-size: larger;
+}
+
+.selected-file {
+    background-color: rgb(255, 134, 94);
+    background-clip: border-box;
+    font-weight: bolder;
+}
+
+[data-order='one']:not(p) {
+    background-color: rgb(229, 64, 11);
+    background-clip: border-box;
+    font-weight: bolder;
+}
+
+[data-order='two'] {
+    background-color: orange;
+    background-clip: border-box;
+    font-weight: bolder;
+}
+
+#container3 {
+    text-align: left;
+}
+
+#container3 h3 {
+    font-size: 24px;
+}
+
+#container3 a {
+    font-size: smaller;
+}
+
+#container3 i {
+    margin-left: 5px;
+    font-size: 20px;
+}
+
+table {
+    margin: auto;
+    margin-top: 10px;
+    padding-bottom: 10px;
+}
+
+td {
+    padding: 10px 10px 10px 10px;
+    width: 220px;
+    text-align: center;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: rgb(187, 235, 212);
+}
+
+th {
+    padding: 10px 10px 10px 10px;
+    width: 220px;
+    text-align: center;
+    text-transform: uppercase;
+    border-bottom: 2px solid #111111;
+    border-top: 1px solid #111111;
+}
+
+.popup {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+    width: 300px;
+    background: #f2f2f2;
+    text-align: center;
+    align-items: center;
+    padding: 40px;
+    border: 1px solid #b3b3b3;
+    box-shadow: 0px 5px 10px rgba(0,0,0,.2);
+    z-index: 9999;
+    display: none;
+}
+
+#warning i {
+    font-size: 60px;
+    color: #be2626;
+}
+
+#warning h1{
+    font-size: 30px;
+    color: #1b2631;
+}
+
+#warning button {
+    margin: 30px 0px 0px  0px;
+    background: #999999;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 1px solid #808080;
+    padding: 10px 10px;
+}
+
+#warning button:hover {
+    background: #8c8c8c;
+}
+
+#instructions {
+    text-align: left;
+    padding: 20px;
+}
+
+#instructions ol {
+    margin: 20px;
+    padding: 0;
+}
+
+#instructions i , #correlation i{
+    position: relative;
+    top: 0px;
+    float: right;
+    font-size: 20px;
+}
+
+#instructions ul {
+    list-style: circle;
+    margin: 20px;
+}
+
+#instructions li {
+    padding: 5px;
+    font-size: 15px;
+}
+
+#correlation {
+    text-align: center;
+    width: 480px;
+    margin: auto;
+    display: none;
+    padding: 20px;
+    background-color: #be2626;
+    color: white;
+    font-size: 20px;
+    border-radius: 5px;
+}

@@ -1,0 +1,109 @@
+<!doctype html>
+<html>
+    <head>
+        <title>File Upload</title>
+        <link rel="stylesheet" href="static/dropzone/dist/dropzone.css">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css">
+        <link rel="stylesheet" href="static/css/style.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/socket.io/1.3.6/socket.io.min.js"></script>
+        <script src="static/dropzone/dist/dropzone.js"></script>
+    </head>
+    <body>
+        <div class="header">
+            <ul>
+                <li class="image"><img src="static/img/logo.png" alt='SKUVision logo'></li>
+                <li><a href="https://skuvision.github.io/">Website</a></li>
+                <li><a href="https://www.linkedin.com/company/skuvision/?viewAsMember=true">LinkedIn</a></li>
+                <li><a id="instructions-popup"href="">Instructions</a></li>
+            </ul>
+        </div>
+        <div id="upload">
+            <h1>Upload and Join Up To 5 Files</h1>
+            <p>Make sure your file has the ".csv" extension (see instructions)</p>
+            <div id="container1">  
+                <form action="{{ url_for('upload_files') }}" class="dropzone needsclick dz-clickable dz-remove">
+                    <div class="dz-message needsclick">
+                        <button type="button" class="dz-button">Drop files here or click to upload.</button>
+                    </div>
+                </form>
+            </div>
+            <button type="button" id="init">Upload Finished</button>
+        </div>
+        <div id="correlation">
+            <i class="far fa-times-circle"></i>
+            <span></span>
+        </div>
+        <div id="quarters">
+            <h3>Select Files and Columns</h3>
+            <p id="before">Finish uploading files to join</p>
+            <div id="container2">
+                <div class="first">
+                    <div class="files-list">
+                    </div>
+                </div>
+                <div class="first">
+                    <div class="columns-list">
+                        <p class="before">Select a file from the left</p>
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="files-list"> 
+                    </div>
+                </div>
+                <div class="second">
+                    <div class="columns-list">
+                        <p class="before">Select a file from the left</p>
+                    </div>
+                </div>
+
+            <button type="button" id="add">Add</button>
+            </div>
+        </div>
+
+        <div id="selected">
+            <div id="container3">
+                <h3>Your Selections</h3>
+                <a href="" id="reset">Reset Selections<i class="fas fa-trash"></i></a>
+            </div>
+                <table id="selections">
+                    <thead>
+                        <tr>
+                            <th>First File</th>
+                            <th>Second File</th>
+                            <th>First File Columns</th>
+                            <th>Second File Columns</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            <button type="button" id="join">Join</button>
+        </div>
+        <div class="popup" id="warning">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h1 id="message">Warning Message</h1>
+            <button type="button">Close</button>
+        </div>
+        <div class="popup" id="instructions">
+            <i class="far fa-times-circle"></i>
+            <h3>How to Use</h3>
+            <ol>
+                <li>Upload up to 5 files</li>
+                <li>Select files and up to two columns to join on</li>
+                <li>Click the "Add" button to save selections</li>
+                <li>Click the "Join" button to download merged file</li>
+            </ol>
+            <h3>Upload and Join Restrictions</h3>
+            <ul>
+                <li>Only upload files with ".csv" extension</li>
+                <li>Only upload up to 5 files</li>
+                <li>Can't join two of the same files</li>
+                <li>Column names can't contain commas</li>
+                <li>If joining on multiple columns, order of column selection matters</li>
+                <li>Aside from first selection, new selections must choose one file that has already been selected</li>
+            </ul>
+        </div>
+        <script type="text/javascript" src="static/js/script.js"></script>
+    </body>
+</html>
